@@ -1,5 +1,7 @@
-let size = 200;
-let doubleSize = 200 * 2;
-let minSize = (doubleSize * 2) - (200 / 2);
-document.write(minSize);
+// adding a function for a pop up message
+alert('Hello World');
+
+// funtion to display my fav food
+let favoriteFood = 'Pizza';
+document.write(favoriteFood);
 
