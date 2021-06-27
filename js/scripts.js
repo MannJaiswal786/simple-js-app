@@ -31,5 +31,5 @@ let pokemonList = [{name: "Pikachu",
                     type: ['water','ice'], 
                     abilities: ["hydration","shell-armor"]
                 }];
-
+                   
                 
