@@ -1,7 +1,35 @@
-// adding a function for a pop up message
-alert('Hello World');
+let pokemonList = [{name: "Pikachu", 
+                    height: 15, 
+                    type: 'electric', 
+                    abilities: ["static", "lightninggrod"]
+                },
 
-// funtion to display my fav food
-let favoriteFood = 'Pizza';
-document.write(favoriteFood);
+                {
+                    name: "Butterfree", 
+                    height: 43, 
+                    type: ['bug', 'flying'], 
+                    abilities: ["compoundeyes", "tinted-lens"]
+                },
 
+                {
+                    name: "Nidoking", 
+                    height: 55, 
+                    type: ['ground','poison'], 
+                    abilities: ["poison-point", "rivalry"]
+                },
+
+                {
+                    name: "Keldeo", 
+                    height: 50, 
+                    type: ['water','fighting'], 
+                    abilities: "justified"
+                },
+
+                {
+                    name: "Lapras", 
+                    height: 98, 
+                    type: ['water','ice'], 
+                    abilities: ["hydration","shell-armor"]
+                }];
+
+                
