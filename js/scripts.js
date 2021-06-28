@@ -1,37 +1,39 @@
 let pokemonList = [
 {
     name: "Pikachu", 
-    height: 15, 
+    height: 1.4, 
     type: 'electric', 
     abilities: ["static", "lightninggrod"]
 },
 
 {
     name: "Butterfree", 
-    height: 43, 
+    height: 3.7, 
     type: ['bug', 'flying'], 
     abilities: ["compoundeyes", "tinted-lens"]
 },
 
 {
     name: "Nidoking", 
-    height: 55, 
+    height: 4.7, 
     type: ['ground','poison'], 
     abilities: ["poison-point", "rivalry"]
 },
 
 {
     name: "Keldeo", 
-    height: 50, 
+    height: 5.9, 
     type: ['water','fighting'], 
     abilities: "justified"
 },
 
 {
     name: "Lapras", 
-    height: 98, 
+    height: 8.2, 
     type: ['water','ice'], 
     abilities: ["hydration","shell-armor"]
 }];
+
+
                    
                 
