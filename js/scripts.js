@@ -37,15 +37,16 @@ let pokemonList = [
 
 
 // for loop to iterate over pokemon's list
-for (let i =0; i < pokemonList.length; i++){
+    for (let i =0; i < pokemonList.length; i++){
     document.write("|Name: " + pokemonList[i].name + " |Height: " + pokemonList[i].height+ " |Type: " + pokemonList[i].type + " |Abilities: "+ pokemonList[i].abilities +"|</br>");
+// conditionals to print the pokemon with their respectful heights
     if (pokemonList[i].height > 7){
-        document.write("|" +pokemonList[i].name+ " is a huge pokemon!" + "|</br>");
+            document.write("|" +pokemonList[i].name+ " is a huge pokemon!" + "|</br>");
     }
-        else if (pokemonList[i].height > 4 && pokemonList[i].height < 6.9) {
+    else if (pokemonList[i].height > 4 && pokemonList[i].height < 6.9) {
             document.write("|"+pokemonList[i].name + " is average in its size" + "|</br>");
         }
-        else {
+    else {
             document.write("|"+pokemonList[i].name+" is small but powerful" + "|</br>");
         }
     }
