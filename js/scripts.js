@@ -2,38 +2,41 @@ let pokemonList = [
 {
     name: "Pikachu", 
     height: 1.4, 
-    type: 'electric', 
-    abilities: ["static", "lightninggrod"]
+    type: 'Electric', 
+    abilities: ["Static", "Lightninggrod"]
 },
 
 {
     name: "Butterfree", 
     height: 3.7, 
-    type: ['bug', 'flying'], 
-    abilities: ["compoundeyes", "tinted-lens"]
+    type: ['Bug', 'Flying'], 
+    abilities: ["Compoundeyes", "Tinted-Lens"]
 },
 
 {
     name: "Nidoking", 
     height: 4.7, 
-    type: ['ground','poison'], 
-    abilities: ["poison-point", "rivalry"]
+    type: ['Ground','Poison'], 
+    abilities: ["Poison-Point", "Rivalry"]
 },
 
 {
     name: "Keldeo", 
     height: 5.9, 
-    type: ['water','fighting'], 
-    abilities: "justified"
+    type: ['Water','Fighting'], 
+    abilities: "Justified"
 },
 
 {
     name: "Lapras", 
     height: 8.2, 
-    type: ['water','ice'], 
-    abilities: ["hydration","shell-armor"]
+    type: ['Water','Ice'], 
+    abilities: ["Hydration","Shell-Armor"]
 }];
 
+for (i =0; i < pokemonList.length; i++){
+    document.write("|Name: " + pokemonList[i].name + " |Height: " + pokemonList[i].height+ " |Type:" + pokemonList[i].type + " </br>");
+}
 
                    
                 
