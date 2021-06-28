@@ -1,8 +1,18 @@
 body {
-  padding-top: 200px;
   text-align: center;
   background-color: #cc0000;
   color: #ffde00;
   font-size: larger;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.pokemon_logo {
+  width: 378px;
+}
+
+.page_header {
+  width: 100%;
+  padding: 10px;
+  display: flex;
 }
