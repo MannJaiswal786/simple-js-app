@@ -36,31 +36,25 @@ let pokemonList = [
   },
 ];
 
-// for loop to iterate over pokemon's list
-for (let i = 0; i < pokemonList.length; i++) {
+// foeEach loop to iterate over pokemon's list
+pokemonList.forEach(function (pokemon) {
   document.write(
     "|Name: " +
-      pokemonList[i].name +
+      pokemon.name +
       " |Height: " +
-      pokemonList[i].height +
+      pokemon.height +
       " |Type: " +
-      pokemonList[i].type +
+      pokemon.type +
       " |Abilities: " +
-      pokemonList[i].abilities +
+      pokemon.abilities +
       "|</br>"
   );
   // conditionals to print the pokemon with their respectful heights
-  if (pokemonList[i].height > 7) {
-    document.write(
-      "|" + pokemonList[i].name + " is a huge pokemon!" + "|</br>"
-    );
-  } else if (pokemonList[i].height > 4 && pokemonList[i].height < 6.9) {
-    document.write(
-      "|" + pokemonList[i].name + " is average in its size" + "|</br>"
-    );
+  if (pokemon.height > 7) {
+    document.write("|" + pokemon.name + " is a huge pokemon!" + "|</br>");
+  } else if (pokemon.height > 4 && pokemon.height < 6.9) {
+    document.write("|" + pokemon.name + " is average in its size" + "|</br>");
   } else {
-    document.write(
-      "|" + pokemonList[i].name + " is small but powerful" + "|</br>"
-    );
+    document.write("|" + pokemon.name + " is small but powerful" + "|</br>");
   }
-}
+});
