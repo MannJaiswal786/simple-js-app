@@ -1,43 +1,57 @@
 // Creating a list of pokemon
-let pokemonList = [
-  {
-    name: "Pikachu",
-    height: 1.4,
-    type: "Electric",
-    abilities: ["Static", "Lightninggrod"],
-  },
+let pokemonRepository = (function () {
+  let pokemonList = [
+    {
+      name: "Pikachu",
+      height: 1.4,
+      type: "Electric",
+      abilities: ["Static", "Lightninggrod"],
+    },
 
-  {
-    name: "Butterfree",
-    height: 3.7,
-    type: ["Bug", "Flying"],
-    abilities: ["Compoundeyes", "Tinted-Lens"],
-  },
+    {
+      name: "Butterfree",
+      height: 3.7,
+      type: ["Bug", "Flying"],
+      abilities: ["Compoundeyes", "Tinted-Lens"],
+    },
 
-  {
-    name: "Nidoking",
-    height: 4.7,
-    type: ["Ground", "Poison"],
-    abilities: ["Poison-Point", "Rivalry"],
-  },
+    {
+      name: "Nidoking",
+      height: 4.7,
+      type: ["Ground", "Poison"],
+      abilities: ["Poison-Point", "Rivalry"],
+    },
 
-  {
-    name: "Keldeo",
-    height: 5.9,
-    type: ["Water", "Fighting"],
-    abilities: "Justified",
-  },
+    {
+      name: "Keldeo",
+      height: 5.9,
+      type: ["Water", "Fighting"],
+      abilities: "Justified",
+    },
 
-  {
-    name: "Lapras",
-    height: 8.2,
-    type: ["Water", "Ice"],
-    abilities: ["Hydration", "Shell-Armor"],
-  },
-];
+    {
+      name: "Lapras",
+      height: 8.2,
+      type: ["Water", "Ice"],
+      abilities: ["Hydration", "Shell-Armor"],
+    },
+  ];
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  function getAll() {
+    return pokemonList;
+  }
+  return {
+    add: add,
+    getAll: getAll,
+  };
+})();
 
 // foeEach loop to iterate over pokemon's list
-pokemonList.forEach(function (pokemon) {
+pokemonRepository.getAll().forEach(function (pokemon) {
   document.write(
     "|Name: " +
       pokemon.name +
