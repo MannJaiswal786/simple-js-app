@@ -50,7 +50,14 @@ let pokemonRepository = (function () {
   };
 })();
 
-// foeEach loop to iterate over pokemon's list
+pokemonRepository.add({
+  name: "Raichu",
+  height: 1.5,
+  type: "Electric",
+  abilities: "Static",
+});
+
+// forEach loop to iterate over pokemon's list
 pokemonRepository.getAll().forEach(function (pokemon) {
   document.write(
     "|Name: " +
