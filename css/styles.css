@@ -16,3 +16,30 @@ body {
   padding: 10px;
   display: flex;
 }
+
+.pokemonlist-button {
+  border-radius: 10px;
+  width: 200px;
+  height: 60px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background: gold;
+  color: black;
+  border: #1560bd solid 4px;
+  transition: all 0.4s;
+  margin-bottom: 15px;
+  display: inline-block;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.pokemonlist-button:hover {
+  border-radius: 50px;
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px #f85959, 0 15px 0 -4px #87c3fa,
+    0 16px 10px -3px white;
+}
+
+.pokemon-list {
+  list-style: none;
+}

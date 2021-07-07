@@ -44,9 +44,31 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+
+  // To create elements and add event listeners
+  function addListItem(pokemon) {
+    let pokemonUnorderedList = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("pokemonlist-button");
+    listItem.appendChild(button);
+    pokemonUnorderedList.appendChild(listItem);
+    button.addEventListener("click", function () {
+      showDetails(pokemon);
+    });
+  }
+
+  // To fetch details of pokemon
+  function showDetails(pokemon) {
+    console.log("Pokemon Name: " + pokemon.name);
+    document.write("Pokemon Name: " + pokemon.name);
+  }
   return {
     add: add,
     getAll: getAll,
+    addListItem: addListItem,
+    showDetails: showDetails,
   };
 })();
 
@@ -59,23 +81,5 @@ pokemonRepository.add({
 
 // forEach loop to iterate over pokemon's list
 pokemonRepository.getAll().forEach(function (pokemon) {
-  document.write(
-    "|Name: " +
-      pokemon.name +
-      " |Height: " +
-      pokemon.height +
-      " |Type: " +
-      pokemon.type +
-      " |Abilities: " +
-      pokemon.abilities +
-      "|</br>"
-  );
-  // conditionals to print the pokemon with their respectful heights
-  if (pokemon.height > 7) {
-    document.write("|" + pokemon.name + " is a huge pokemon!" + "|</br>");
-  } else if (pokemon.height > 4 && pokemon.height < 6.9) {
-    document.write("|" + pokemon.name + " is average in its size" + "|</br>");
-  } else {
-    document.write("|" + pokemon.name + " is small but powerful" + "|</br>");
-  }
+  pokemonRepository.addListItem(pokemon);
 });
