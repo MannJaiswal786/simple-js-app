@@ -153,7 +153,6 @@ pokemonRepository.loadList().then(function () {
   });
 });
 
-//------------------------------------------------------------------------------------------------------------------------------------------------//
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
