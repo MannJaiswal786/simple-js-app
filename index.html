@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar my-navbar">
+      <nav class="navbar fixed-top my-navbar">
         <a class="navbar-brand" href="#">
           <img
             src="img/pokemon_logo.png"
@@ -30,6 +30,7 @@
         </a>
         <div class="search-box">
           <input
+            id="searchIn"
             class="search-txt"
             type="text"
             name=""
@@ -43,7 +44,7 @@
     </header>
 
     <!--List of pokemon-->
-    <div>
+    <div class="list-wrapper">
       <ul class="list-group"></ul>
     </div>
     <!-- Modal -->

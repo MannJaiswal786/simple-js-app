@@ -9,7 +9,6 @@ body {
 
 .pokemon_logo {
   width: 350px;
-  position: absolute;
   left: 40%;
   bottom: 10%;
 }
@@ -93,7 +92,6 @@ body {
   top: 0;
   width: 100%;
   height: 250px;
-  margin-bottom: 10px;
 }
 
 .search-box {
@@ -145,4 +143,8 @@ body {
 
 .search-box:hover > .search-btn {
   background: white;
+}
+
+.list-wrapper {
+  margin-top: 220px;
 }

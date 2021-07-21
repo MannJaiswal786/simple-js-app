@@ -2,6 +2,8 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  let searchInput = document.querySelector("#seachIn");
+  let pokemon = "";
 
   //function to add pokemon
   function add(pokemon) {
@@ -113,6 +115,8 @@ let pokemonRepository = (function () {
 
     //create element for type
     let typeElement = $("<p>" + "Type: " + item.types + "</p>");
+
+    // event listener for seach bar
 
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
