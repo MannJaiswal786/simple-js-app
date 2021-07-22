@@ -2,8 +2,7 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
-  let searchInput = document.querySelector("#seachIn");
-  let pokemon = "";
+  let searchBar = document.querySelector("#search-bar");
 
   //function to add pokemon
   function add(pokemon) {
@@ -45,11 +44,10 @@ let pokemonRepository = (function () {
       .then(function (json) {
         json.results.forEach(function (item) {
           let pokemon = {
-            name: item.name.toUpperCase(),
+            name: item.name.charAt(0).toUpperCase() + item.name.slice(1),
             detailsUrl: item.url,
           };
           add(pokemon);
-          console.log(pokemon);
         });
       })
       .catch(function (e) {
@@ -114,7 +112,13 @@ let pokemonRepository = (function () {
     let weightElement = $("<p>" + "Weight: " + item.weight + " lbs" + "</p>");
 
     //create element for type
-    let typeElement = $("<p>" + "Type: " + item.types + "</p>");
+    let typeElement = $(
+      "<p>" +
+        "Type: " +
+        item.types.charAt(0).toUpperCase() +
+        item.types.slice(1) +
+        "</p>"
+    );
 
     // event listener for seach bar
 
@@ -125,6 +129,20 @@ let pokemonRepository = (function () {
     modalBody.append(weightElement);
     modalBody.append(typeElement);
   }
+
+  //search bar
+  searchBar.addEventListener("input", function () {
+    let pokemonList = document.querySelectorAll("li");
+    let value = searchBar.value.toUpperCase();
+
+    pokemonList.forEach(function (pokemon) {
+      if (pokemon.innerText.toUpperCase().indexOf(value) > -1) {
+        pokemon.style.display = "";
+      } else {
+        pokemon.style.display = "none";
+      }
+    });
+  });
 
   return {
     add: add,
